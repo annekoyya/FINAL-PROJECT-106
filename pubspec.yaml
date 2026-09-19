@@ -1,0 +1,53 @@
+name: wordie
+description: Wordie - a Flutter + Firebase word-duel game with unlimited vocabulary via dictionary API.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Offline-first downloadable word list
+  http: ^1.2.2
+  path_provider: ^2.1.4
+
+  # State management
+  provider: ^6.1.2
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Local persistence
+  shared_preferences: ^2.2.3
+
+  # Animations / UX
+  confetti: ^0.7.0
+
+  # Share results
+  share_plus: ^10.0.2
+
+  # Firebase (optional cloud sync / leaderboard / auth)
+  firebase_core: ^3.4.0
+  cloud_firestore: ^5.2.0
+  firebase_auth: ^5.1.0
+
+  # Social sign-in (Google). Apple sign-in requires platform-specific
+  # setup (Xcode capability + Services ID) not doable from this zip alone -
+  # see README "Auth Setup" section before enabling the Apple button.
+  google_sign_in: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/words/answers.json
+    - assets/words/valid_guesses.json
+    - assets/words/definitions.json
